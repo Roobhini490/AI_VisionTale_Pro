@@ -1,0 +1,21 @@
+# Virtual Environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Story history (generated files)
+history/
+
+# Generated audio
+assets/audio/story.mp3
+
+# Secrets
+.streamlit/
+
+# VS Code settings
+.vscode/
+
+# Environment variables
+.env

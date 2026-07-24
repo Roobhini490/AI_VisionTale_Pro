@@ -1,0 +1,323 @@
+/* ==========================================================
+   GOOGLE FONT
+========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+
+/* ==========================================================
+   HIDE STREAMLIT DEFAULT COMPONENTS
+========================================================== */
+#MainMenu {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+.title {
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    font-size: 82px;
+    color: #FF8FB1;
+    letter-spacing: 3px;
+    margin-top: 50px;
+
+    text-shadow:
+        -3px -3px 0 #3B1E1E,
+         3px -3px 0 #3B1E1E,
+        -3px  3px 0 #3B1E1E,
+         3px  3px 0 #3B1E1E,
+         8px  8px 0 rgba(0,0,0,0.35);
+
+    animation: glow 3s ease-in-out infinite;
+}
+
+
+/* ==========================================================
+   SUBTITLE
+========================================================== */
+.subtitle {
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: #4B0082;
+    letter-spacing: 3px;
+}
+
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+div.stButton > button:first-child {
+
+    width: 360px;
+    height: 75px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #FFB6E6 0%,
+        #FF8FD8 30%,
+        #D8B4FE 65%,
+        #A5D8FF 100%
+    );
+
+    color: white;
+
+    font-family: 'Comic Sans MS', cursive !important;
+    font-size: 40px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.35);
+
+    box-shadow:
+        0 8px 20px rgba(255,105,180,0.45),
+        0 0 20px rgba(216,180,254,0.45);
+
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+div.stButton > button:hover {
+
+    transform: scale(1.08);
+
+    background: linear-gradient(
+        135deg,
+        #FFC4EC,
+        #FFA4E5,
+        #E2C8FF,
+        #B8E3FF
+    );
+
+    box-shadow:
+        0 12px 28px rgba(255,105,180,0.6),
+        0 0 30px rgba(255,255,255,0.8);
+}
+
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes rainbowText {
+
+    0%   { color: #FF4D6D; }
+
+    20%  { color: #FFD93D; }
+
+    40%  { color: #6BCB77; }
+
+    60%  { color: #4D96FF; }
+
+    80%  { color: #B983FF; }
+
+    100% { color: #FF4D6D; }
+}
+
+@keyframes glow {
+
+    0% {
+        filter: drop-shadow(0 0 5px #FFD93D);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 18px #FFF176);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 5px #FFD93D);
+    }
+}
+
+
+/* ==========================================================
+   GLASS CARD
+========================================================== */
+
+.glass-card {
+
+    width: 70%;
+
+    margin: auto;
+    margin-top: 40px;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 2px solid rgba(255,255,255,0.2);
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+
+/* ==========================================================
+   LOGIN CARD
+========================================================== */
+
+.login-card {
+
+    width: 650px;
+
+    margin: auto;
+
+    padding: 40px 45px;
+
+    border-radius: 35px;
+
+    background: rgba(255,255,255,0.18);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 2px solid rgba(255,255,255,0.25);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* ==========================================================
+   TEXT INPUT
+========================================================== */
+
+.stTextInput input {
+
+    border-radius: 25px !important;
+
+    border: 2px solid #FFD54F !important;
+
+    font-size: 20px !important;
+
+    padding: 10px !important;
+}
+
+
+/* ==========================================================
+   SELECT BOX
+========================================================== */
+
+.stSelectbox select {
+
+    border-radius: 20px !important;
+
+    border: 2px solid #FFD54F !important;
+
+    font-size: 20px !important;
+
+    padding: 10px !important;
+}
+
+
+/* ==========================================================
+   LABELS
+========================================================== */
+
+div[data-testid="stTextInput"] label,
+div[data-testid="stSelectbox"] label,
+div[data-testid="stRadio"] label {
+
+    color: #3B1E1E !important;
+
+    font-size: 28px !important;
+
+    font-family: 'Chewy', cursive !important;
+
+    font-weight: bold !important;
+}
+
+
+/* ==========================================================
+   AGE DROPDOWN
+========================================================== */
+
+div[data-testid="stSelectbox"] > div {
+
+    font-size: 18px !important;
+}
+
+div[data-testid="stSelectbox"] * {
+
+    font-size: 18px !important;
+
+    font-family: 'Comic Sans MS', cursive !important;
+
+    color: #e45598 !important;
+}
+
+
+/* ==========================================================
+   RADIO BUTTONS
+========================================================== */
+
+div[data-testid="stRadio"] p {
+
+    font-size: 18px !important;
+
+    font-family: 'Comic Sans MS', cursive !important;
+
+    font-weight: bold !important;
+
+    color: #e45598 !important;
+}
+
+div[data-testid="stRadio"] label {
+
+    font-size: 18px !important;
+}
+
+/* ===========================
+   CREATE ACCOUNT GLASS CARD
+=========================== */
+.create-card{
+    width: 800px;
+
+    margin: auto;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.18);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* Camera & Upload Box */
+
+div[data-testid="stCameraInput"]{
+    background: rgba(255,255,255,0.18);
+    border-radius: 25px;
+    padding: 20px;
+    border: 2px solid #FFB6E6;
+}
+
+div[data-testid="stFileUploader"]{
+    background: rgba(255,255,255,0.18);
+    border-radius: 25px;
+    padding: 20px;
+    border: 2px solid #A8E6A3;
+}
