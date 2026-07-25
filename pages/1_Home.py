@@ -2,7 +2,7 @@ from streamlit_float import *
 import vision_utils
 import streamlit as st
 from vision_utils import play_background_music
-
+play_background_music()
 
 
 st.set_page_config(
@@ -10,11 +10,11 @@ st.set_page_config(
     page_icon="📖",
     layout="wide"
 )
-play_background_music()
+
 
 st.markdown("""
 <style>
-[data-testid="stSidebar"] {
+ [data-testid="stSidebar"] {
     display: none;
 }
 
