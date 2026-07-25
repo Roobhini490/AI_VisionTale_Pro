@@ -2,14 +2,9 @@ from streamlit_float import *
 import vision_utils
 import streamlit as st
 from vision_utils import play_background_music
-from vision_utils import play_background_music
-import streamlit as st
 
-if "music_on" not in st.session_state:
-    st.session_state.music_on = True   # Music ON by default
 
-if st.session_state.music_on:
-    play_background_music()
+
 
 
 st.set_page_config(
@@ -17,6 +12,11 @@ st.set_page_config(
     page_icon="📖",
     layout="wide"
 )
+if "music_on" not in st.session_state:
+    st.session_state.music_on = True   # Music ON by default
+
+if st.session_state.music_on:
+    play_background_music()
 
 
 st.markdown("""
