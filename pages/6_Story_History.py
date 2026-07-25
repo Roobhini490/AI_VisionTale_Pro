@@ -2,6 +2,9 @@ import streamlit as st
 import os
 from vision_utils import get_base64
 import vision_utils
+from vision_utils import play_background_music
+
+play_background_music()
 
 
 st.set_page_config(

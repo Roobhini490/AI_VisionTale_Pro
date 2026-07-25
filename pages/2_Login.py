@@ -4,7 +4,9 @@ import streamlit as st
 from vision_utils import get_base64
 import time
 from database import login_user
-import vision_utils
+from vision_utils import play_background_music
+
+play_background_music()
 
 
 bg = get_base64("assets/images/background.png")

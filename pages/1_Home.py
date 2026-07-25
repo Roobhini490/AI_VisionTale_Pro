@@ -1,5 +1,8 @@
+from streamlit_float import *
 import vision_utils
 import streamlit as st
+from vision_utils import play_background_music
+
 
 
 st.set_page_config(
@@ -7,8 +10,7 @@ st.set_page_config(
     page_icon="📖",
     layout="wide"
 )
-
-
+play_background_music()
 
 st.markdown("""
 <style>
@@ -68,7 +70,6 @@ with open("style.css") as css:
         unsafe_allow_html=True
     )
 
-
     # Glass Card - Title
 st.markdown("""
 <div class="glass-card">
@@ -76,6 +77,7 @@ st.markdown("""
 <div class="title">
 AI VisionTale
 </div>
+
 
 <div class="subtitle">
 ✨ Every Picture Opens a New Fairytale! ✨
@@ -93,4 +95,3 @@ with col2:
     if st.button("📖 Open the Magic Book", use_container_width=True):
         st.switch_page("pages/2_Login.py")
 
-   

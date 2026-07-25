@@ -8,7 +8,9 @@ import json
 from gtts import gTTS
 import os
 from datetime import datetime
-import vision_utils
+from vision_utils import play_background_music
+
+play_background_music()
 
 
 images = st.session_state.get("story_images", [])

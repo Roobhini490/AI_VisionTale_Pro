@@ -1,7 +1,7 @@
 import streamlit as st
 from vision_utils import get_base64
-import vision_utils
-
+from vision_utils import play_background_music
+play_background_music()
 if "camera_images" not in st.session_state:
     st.session_state.camera_images = []
 
