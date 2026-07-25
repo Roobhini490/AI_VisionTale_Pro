@@ -10,7 +10,24 @@ import os
 from datetime import datetime
 from vision_utils import play_background_music
 
-play_background_music()
+
+if "music_on" not in st.session_state:
+    st.session_state.music_on = True
+
+col1, col2 = st.columns([12,1])
+
+with col2:
+    if st.session_state.music_on:
+        if st.button("🔊", help="Mute Music"):
+            st.session_state.music_on = False
+            st.rerun()
+    else:
+        if st.button("🔇", help="Play Music"):
+            st.session_state.music_on = True
+            st.rerun()
+
+if st.session_state.music_on:
+    play_background_music()
 
 
 images = st.session_state.get("story_images", [])
@@ -20,6 +37,11 @@ st.set_page_config(
     page_icon="📖",
     layout="wide"
 )
+language = st.session_state.get("selected_language", "English")
+theme = st.session_state.get("selected_theme", "Adventure")
+
+
+
 
 bg = get_base64("assets/images/background.png")
 st.markdown("""
@@ -55,6 +77,8 @@ background-attachment:fixed;
 
 </style>
 """, unsafe_allow_html=True)
+
+
 
 with open("style.css") as css:
     st.markdown(f"<style>{css.read()}</style>", unsafe_allow_html=True)
@@ -111,11 +135,26 @@ with st.spinner("🪄 AI is creating your magical story..."):
         for img in images:
             pil_images.append(Image.open(img))
 
-        story = generate_story(pil_images)
+        story = generate_story(
+        pil_images,
+        language,
+        theme
+)
 
         st.session_state["story"] = story
 
-        tts = gTTS(text=story, lang="en")
+        language_map = {
+         "English": "en",
+         "Tamil": "ta",
+         "Hindi": "hi",
+         "German": "de",
+         "French": "fr"
+}
+
+        tts = gTTS(
+    text=story,
+    lang=language_map[language]
+)
 
         audio_path = "assets/audio/story.mp3"
 

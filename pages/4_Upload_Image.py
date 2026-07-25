@@ -1,7 +1,12 @@
 import streamlit as st
 from vision_utils import get_base64
 from vision_utils import play_background_music
-play_background_music()
+if "music_on" not in st.session_state:
+    st.session_state.music_on = True   # Music ON by default
+
+if st.session_state.music_on:
+    play_background_music()
+
 if "camera_images" not in st.session_state:
     st.session_state.camera_images = []
 
@@ -312,4 +317,6 @@ color:#6F4E7C;
          st.session_state.story_images = all_images
 
 # Go to story page
-         st.switch_page("pages/5_Generate_Story.py")      
+        st.session_state["selected_language"] = language
+        st.session_state["selected_theme"] = theme
+        st.switch_page("pages/5_Generate_Story.py")      

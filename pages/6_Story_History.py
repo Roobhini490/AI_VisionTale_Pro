@@ -4,7 +4,11 @@ from vision_utils import get_base64
 import vision_utils
 from vision_utils import play_background_music
 
-play_background_music()
+if "music_on" not in st.session_state:
+    st.session_state.music_on = True   # Music ON by default
+
+if st.session_state.music_on:
+    play_background_music()
 
 
 st.set_page_config(
