@@ -126,6 +126,12 @@ AI_VisionTale/
 │   ├── Generate_Story.py
 │   └── Story_History.py
 │
+├── screenshots/
+│   ├── home.png
+│   ├── login.png
+│   ├── upload.png
+│   ├── story.png
+│   └── history.png
 ├── gemini_service.py
 ├── vision_utils.py
 ├── database.py
