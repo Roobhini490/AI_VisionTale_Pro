@@ -1,4 +1,6 @@
 import streamlit as st
+if "music_on" not in st.session_state:
+    st.session_state.music_on = False
 from database import connect
 import vision_utils
 

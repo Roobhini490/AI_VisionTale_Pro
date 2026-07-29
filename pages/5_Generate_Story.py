@@ -40,6 +40,14 @@ st.set_page_config(
 language = st.session_state.get("selected_language", "English")
 theme = st.session_state.get("selected_theme", "Adventure")
 
+st.markdown("""
+<style>
+div[data-testid="stSpinner"] p {
+    color: black !important;
+    font-weight: bold;
+}
+</style>
+""", unsafe_allow_html=True)
 
 
 
